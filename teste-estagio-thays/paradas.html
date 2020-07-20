@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Paradas</title>
+</head>
+
+<body>
+    <button onclick="goBack()" class="btn">
+        <img src="img/back.png">
+    </button>
+    <header id="app">
+        <h1>Pontos de parada</h1>
+        <h2> Para realizar a busca basta inserir os dados nos campos abaixo. Clique em um card abaixo do mapa para exibir a localização dos pontos de parada selecionados.</h2>
+
+        <div class="container">
+            <div class="row">
+                <input v-model="linha" @keyup.enter="buscaLinha" class="col-sm" placeholder="Linha">
+                <button @click="buscaLinha" type="button" class="btn btn-secondary col">BUSCAR</button>
+            </div>
+        </div>
+        <p v-show="horario!=''" class="horario">Horário da coleta das informações: {{ horario }}</p>
+
+
+    </header>
+    <div id="map">
+
+    </div>
+    <div id="hcontainer" class="container">
+        <div id="card" class="row row-cols-3"></div>
+    </div>
+
+    <!-- App JS - Google API - Vue -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrObkOwXG05fP0IwA-yWBvw7k7Q9518lQ&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/JavaScript" src="/js/funcoes.js"></script>
+    <script type="text/JavaScript" src="/js/paradas.js"></script>
+</body>
+
+</html>

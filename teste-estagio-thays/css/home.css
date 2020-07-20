@@ -1,0 +1,64 @@
+#googlemaps {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#cabecalho {
+    position: relative;
+    width: 100%;
+    margin: 150px auto 0;
+    padding: 10px;
+    background: #000000aa;
+    height: auto;
+    color: white;
+}
+
+#cabecalho h1 {
+    padding: 10px;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fcfcfc;
+}
+
+.navegacao {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    margin: 0px;
+    align-items: center;
+    background: #000000aa;
+    height: auto;
+}
+
+.card {
+    align-items: center;
+    margin: 10px;
+    background-color: #fcfcfc;
+    width: 100%;
+    max-height: 250px;
+}
+
+.card img {
+    transform: scale(0.7, 0.7);
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 200px;
+    padding: 30px;
+    margin: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+.container h4 {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 5px 13px 5px;
+}

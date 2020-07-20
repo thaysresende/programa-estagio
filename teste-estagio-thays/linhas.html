@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Localização</title>
+</head>
+
+<body>
+    <button onclick="goBack()" class="btn">
+        <img src="img/back.png">
+    </button>
+    <header id="app">
+        <h1>Linhas</h1>
+        <h2> Para realizar a busca basta inserir os dados nos campos abaixo. Após o carregamento dos dados clique no card abaixo do mapa para exibir as informações.</h2>
+
+        <div class="pesquisa row">
+            <input v-model="busca" @keyup.enter="localiza" class="col-sm">
+            <button type="button" @click="localiza" class="btn btn-secondary">BUSCA</button>
+        </div>
+
+        <p v-show="horario!=''" class="horario">Horário da coleta das informações: {{ horario }}</p>
+    </header>
+    <div id="map">
+
+    </div>
+    <div id="hcontainer" class="container">
+        <div id="card" class="row row-cols-3"></div>
+    </div>
+
+    <!-- App JS - Google API - Vue -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrObkOwXG05fP0IwA-yWBvw7k7Q9518lQ&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/JavaScript" src="/js/funcoes.js"></script>
+    <script type="text/JavaScript" src="/js/linhas.js"></script>
+</body>
+
+</html>

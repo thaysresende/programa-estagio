@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <title>Ônibus de SP</title>
+</head>
+
+<body>
+    <div id="googlemaps">
+    </div>
+    <div id="cabecalho">
+        <h1>Ônibus de SP</h1>
+    </div>
+    <div class="navegacao">
+        <div class="card">
+            <a href="localizacao.html">
+                <img src="img/posicao.png" alt="Posição" class="card-img-top">
+                <div class="container">
+                    <h4 class="card-title">Localização dos veículos</h4>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="paradas.html">
+                <img src="img/paradas.png" alt="Paradas" class="card-img-top"">
+                <div class="container">
+                    <h4 class="card-title">Paradas</h4>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="linhas.html">
+                <img src="img/linhas.png" alt="Linhas" class="card-img-top"">
+                <div class="container">
+                    <h4 class="card-title">Linhas</h4>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="previsao.html">
+                <img src="img/previsao.png" alt="Linhas" class="card-img-top">
+                <div class="container">
+                    <h4 class="card-title">Previsão de chegada</h4>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- App JS - Google API - Vue -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrObkOwXG05fP0IwA-yWBvw7k7Q9518lQ&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/JavaScript" src="/js/home.js"></script>
+</body>
+
+</html>
